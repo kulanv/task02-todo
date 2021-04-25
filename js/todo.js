@@ -38,7 +38,6 @@ function displayMessages() {
 </li>
 `
         todo.innerHTML = displayMessage
-
     })
 
 }
