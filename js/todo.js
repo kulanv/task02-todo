@@ -1,5 +1,5 @@
-let addMessage = document.querySelector('.message')
-let addButton = document.querySelector('.add')
+let addMessage = document.querySelector('.task')
+let addButton = document.querySelector('.addBtn')
 let todo = document.querySelector('.todo')
 let todoList = []
 
@@ -73,3 +73,10 @@ todo.addEventListener('contextmenu', function(event) {
         }
     })
 })
+
+//Добавление задачи в список по нажатию Enter
+document.querySelector(".task").addEventListener("keyup", event => {
+    if (event.key !== "Enter") return;
+    document.querySelector(".addBtn").click();
+    event.preventDefault();
+});
